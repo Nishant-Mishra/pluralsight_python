@@ -1,1 +1,2 @@
-print('__init__.py is executed')
+# __init__.py for demo_reader
+
