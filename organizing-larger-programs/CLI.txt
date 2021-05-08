@@ -1,109 +1,58 @@
-
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe
-Python 3.8.9 (tags/v3.8.9:a743f81, Apr  6 2021, 13:22:56) [MSC v.1928 32 bit (Intel)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> import demo_reader
->>> import demo_reader.multireader
->>> import demo_reader.compressed
->>> import demo_reader.compressed.bzipped
->>> import demo_reader.compressed.gzipped
->>> pp(locals())
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'pp' is not defined
->>> from pprint import pprint as pp
->>> pp(locals())
-{'__annotations__': {},
- '__builtins__': <module 'builtins' (built-in)>,
- '__doc__': None,
- '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
- '__name__': '__main__',
- '__package__': None,
- '__spec__': None,
- 'demo_reader': <module 'demo_reader' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'>,
- 'pp': <function pprint at 0x01A8C538>}
->>> import demo_reader.compressed.gzipped
->>> pp(locals())
-{'__annotations__': {},
- '__name__': '__main__',
- '__package__': None,
- '__spec__': None,
- 'demo_reader': <module 'demo_reader' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'>,
- 'pp': <function pprint at 0x01A8C538>}
->>> from demo_reader.compressed import gzipped
->>> pp(locals())
-{'__annotations__': {},
- '__builtins__': <module 'builtins' (built-in)>,
- '__doc__': None,
- '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
- '__name__': '__main__',
- '__package__': None,
- '__spec__': None,
- 'demo_reader': <module 'demo_reader' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'>,
-pressed\\gzipped.py'>,
- 'pp': <function pprint at 0x01A8C538>}
->>> from demo_reader import compressed
->>> pp(locals())
-{'__annotations__': {},
- '__builtins__': <module 'builtins' (built-in)>,
- '__doc__': None,
- '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
- '__name__': '__main__',
- '__package__': None,
- '__spec__': None,
- 'compressed': <module 'demo_reader.compressed' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\compressed\\__init__.py'>,
- 'demo_reader': <module 'demo_reader' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'>,
- 'gzipped': <module 'demo_reader.compressed.gzipped' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\compressed\\gzipped.py'>,
->>>
->>> ^Z
-
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe -m demo_reader.compressed.gzipped text.gz Sample Text compressed with GZIP...
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> ls
-
-
-    Directory: D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----        08-05-2021     14:05                .idea
-d-----        08-05-2021     14:06                demo_reader
-d-----        08-05-2021     11:33                venv
--a----        08-05-2021     13:53           2014 CLI.txt
--a----        08-05-2021     14:08             66 text.gz
-
-
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe -m demo_reader.compressed.bzipped text.bz2 Sample Text compressed with BZ2...
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> ls
-
-
-    Directory: D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----        08-05-2021     14:05                .idea
-d-----        08-05-2021     14:06                demo_reader
-d-----        08-05-2021     11:33                venv
--a----        08-05-2021     13:53           2014 CLI.txt
--a----        08-05-2021     14:08             76 text.bz2
--a----        08-05-2021     14:08             66 text.gz
-
-
 PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python
 Python 3.8.9 (tags/v3.8.9:a743f81, Apr  6 2021, 13:22:56) [MSC v.1928 32 bit (Intel)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
->>> from demo_reader.multireader import MultiReader as mr
->>> r = mr('text.bz2')
->>> r.read()
-'Sample Text compressed with BZ2...'
->>> r.close()
->>> r = mr('text.gz')
->>> r.read()
-'Sample Text compressed with GZIP...'
->>> r.close()
->>> r = mr(r'.\demo_reader\__init__.py')
->>> r.read()
-'# __init__.py for demo_reader\n\n'
->>> r.close()
->>>
+KeyboardInterrupt
+>>> from demo_reader import compressed
+>>> from demo_reader import util
+>>> from demo_reader.compressed import gzipped
+>>> from demo_reader.compressed import bzipped
+>>> from demo_reader.util import writer
+>>> from demo_reader.util.writer import main
+>>> from pprint import pprint as pp
+>>> pp(locals())
+ '__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ '__spec__': None,
+ 'bzipped': <module 'demo_reader.compressed.bzipped' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\compressed\\bzipped.py'>,
+ 'compressed': <module 'demo_reader.compressed' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\compressed\\__init__.py'>,
+ 'gzipped': <module 'demo_reader.compressed.gzipped' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\compressed\\gzipp 'main': <function main at 0x01933C40>,
+ 'util': <module 'demo_reader.util' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\util\\__init__.py'>,
+ 'writer': <module 'demo_reader.util.writer' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\util\\writer.py'>}
+>>> ^Z
+
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe -m demo_reader.compressed.bzipped text.bz2 New Sample compressed with BZ2...
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe -m demo_reader.compressed.gzipped text.gz New Sample Text compressed with GZIP...
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python38-32\lib\runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Program Files (x86)\Python38-32\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader\compressed\gzipped.py", line 9, in <module>
+    util.writer.main(opener)
+AttributeError: module 'demo_reader.util' has no attribute 'writer'
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe -m demo_reader.compressed.gzipped text.gz New Sample Text compressed with GZIP...
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python38-32\lib\runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Program Files (x86)\Python38-32\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader\compressed\gzipped.py", line 9, in <module>
+    util.writer.main(opener)
+AttributeError: module 'demo_reader.util' has no attribute 'writer'
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe -m demo_reader.compressed.gzipped text.gz New Sample Text compressed with GZIP...
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python38-32\lib\runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Program Files (x86)\Python38-32\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader\compressed\gzipped.py", line 3, in <module>
+    from .. import util
+  File "D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader\util\__init__.py", line 2, in <module>
+    import writer
+ModuleNotFoundError: No module named 'writer'
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe -m demo_reader.compressed.gzipped text.gz New Sample Text compressed with GZIP...
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python.exe -m demo_reader.compressed.gzipped text.gz New Sample Text compressed with GZIP...
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>
