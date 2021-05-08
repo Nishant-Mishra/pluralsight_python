@@ -1,29 +1,21 @@
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python
-Python 3.8.9 (tags/v3.8.9:a743f81, Apr  6 2021, 13:22:56) [MSC v.1928 32 bit (Intel)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> import sys
->>> from pprint import pprint as pp
->>> pp(locals())
-{'__annotations__': {},
- '__builtins__': <module 'builtins' (built-in)>,
- '__doc__': None,
- '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
- '__name__': '__main__',
- '__package__': None,
- '__spec__': None,
- 'pp': <function pprint at 0x01C4C538>,
- 'sys': <module 'sys' (built-in)>}
->>> from demo_reader import *
->>> pp(locals())
-{'__annotations__': {},
- '__builtins__': <module 'builtins' (built-in)>,
- '__doc__': None,
- '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
- '__name__': '__main__',
- '__package__': None,
- '__spec__': None,
- 'bz2_open': <function open at 0x01DAD1D8>,
- 'gzip_open': <function open at 0x01DBCC40>,
- 'pp': <function pprint at 0x01C4C538>,
- 'sys': <module 'sys' (built-in)>}
->>>
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python .\multi-reader-program\
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python38-32\lib\runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Program Files (x86)\Python38-32\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File ".\multi-reader-program\__main__.py", line 5, in <module>
+    f = MultiReader(sys.argv[1])
+IndexError: list index out of range
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python .\multi-reader-program\ text.bz2
+New Sample compressed with BZ2...
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python .\multi-reader-program\ text.gz
+New Sample Text compressed with GZIP...
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python .\multi-reader-program\ .\multi-reader-program\__main__.py
+import sys
+
+from demo_reader.multireader import MultiReader
+
+f = MultiReader(sys.argv[1])
+print(f.read())
+f.close()
