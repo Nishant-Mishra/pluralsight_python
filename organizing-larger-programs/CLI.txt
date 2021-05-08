@@ -1,7 +1,13 @@
+
 PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python
 Python 3.8.9 (tags/v3.8.9:a743f81, Apr  6 2021, 13:22:56) [MSC v.1928 32 bit (Intel)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import sys
+>>> sys.path
+['', 'C:\\Program Files (x86)\\Python38-32\\python38.zip', 'C:\\Program Files (x86)\\Python38-32\\DLLs', 'C:\\Program Files (x86)\\Python38-32\\lib', 'C:\\Program Files (x86)\\Python38-32', 'C:\\Program Files (x86)\\Python38-32\\lib\\site-packages']
+>>> sys.path.extend(['path1', 'path2'])
+>>> sys.path
+['', 'C:\\Program Files (x86)\\Python38-32\\python38.zip', 'C:\\Program Files (x86)\\Python38-32\\DLLs', 'C:\\Program Files (x86)\\Python38-32\\lib', 'C:\\Program Files (x86)\\Python38-32', 'C:\\Program Files (x86)\\Python38-32\\lib\\site-packages', 'path1', 'path2']
 >>> from pprint import pprint as pp
 >>> pp(locals())
 {'__annotations__': {},
@@ -11,9 +17,9 @@ Type "help", "copyright", "credits" or "license" for more information.
  '__name__': '__main__',
  '__package__': None,
  '__spec__': None,
- 'pp': <function pprint at 0x01C4C538>,
+ 'pp': <function pprint at 0x01BEC538>,
  'sys': <module 'sys' (built-in)>}
->>> from demo_reader import *
+>>> import demo_reader
 >>> pp(locals())
 {'__annotations__': {},
  '__builtins__': <module 'builtins' (built-in)>,
@@ -22,8 +28,24 @@ Type "help", "copyright", "credits" or "license" for more information.
  '__name__': '__main__',
  '__package__': None,
  '__spec__': None,
- 'bz2_open': <function open at 0x01DAD1D8>,
- 'gzip_open': <function open at 0x01DBCC40>,
- 'pp': <function pprint at 0x01C4C538>,
+ 'demo_reader': <module 'demo_reader' (namespace)>,
+ 'pp': <function pprint at 0x01BEC538>,
  'sys': <module 'sys' (built-in)>}
+>>> demo_reader.__path__
+_NamespacePath(['path1\\demo_reader', 'path2\\demo_reader'])
+>>> demo_reader.__file__
+>>> demo_reader.__class__
+<class 'module'>
+>>> demo_reader.__name__
+'demo_reader'
+>>> import demo_reader.util
+>>> import demo_reader.compressed
+>>> demo_reader.util.__path__
+['path1\\demo_reader\\util']
+>>> demo_reader.compressed.__path__
+['path2\\demo_reader\\compressed']
+>>> demo_reader.compressed.__file__
+'path2\\demo_reader\\compressed\\__init__.py'
+>>> demo_reader.util.__file__
+'path1\\demo_reader\\util\\__init__.py'
 >>>
