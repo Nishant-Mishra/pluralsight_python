@@ -11,14 +11,9 @@ Type "help", "copyright", "credits" or "license" for more information.
  '__name__': '__main__',
  '__package__': None,
  '__spec__': None,
- 'pp': <function pprint at 0x0120C538>,
+ 'pp': <function pprint at 0x0171C538>,
  'sys': <module 'sys' (built-in)>}
->>> import demo_reaer
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ModuleNotFoundError: No module named 'demo_reaer'
 >>> import demo_reader
-__init__.py is executed
 >>> pp(locals())
 {'__annotations__': {},
  '__builtins__': <module 'builtins' (built-in)>,
@@ -28,14 +23,27 @@ __init__.py is executed
  '__package__': None,
  '__spec__': None,
  'demo_reader': <module 'demo_reader' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'>,
- 'pp': <function pprint at 0x0120C538>,
+ 'pp': <function pprint at 0x0171C538>,
  'sys': <module 'sys' (built-in)>}
->>> demo_reader.__class__
-<class 'module'>
->>> demo_reader.__file__
-'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'
->>> demo_reader.__path__
-['D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader']
->>> demo_reader.__name__
-'demo_reader'
+>>> from demo_reader import multireader as mr
+>>> pp(locals())
+{'__annotations__': {},
+ '__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ '__spec__': None,
+ 'demo_reader': <module 'demo_reader' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'>,
+ 'mr': <module 'demo_reader.multireader' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\multireader.py'>,
+ 'pp': <function pprint at 0x0171C538>,
+ 'sys': <module 'sys' (built-in)>}
+>>> mr.MultiReader(r'.\demo_reader\__init__.py')
+<demo_reader.multireader.MultiReader object at 0x01702F88>
+>>> r = _
+>>> r
+<demo_reader.multireader.MultiReader object at 0x01702F88>
+>>> r.read()
+'# __init__.py for demo_reader\n\n'
+>>> r.close()
 >>>
