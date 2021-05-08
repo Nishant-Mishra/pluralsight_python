@@ -5,4 +5,4 @@ from .util import writer
 
 __all__ = ['bz2_open', 'gzip_open']
 
-
+print("__init__.py executed...")
