@@ -1,0 +1,41 @@
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python
+Python 3.8.9 (tags/v3.8.9:a743f81, Apr  6 2021, 13:22:56) [MSC v.1928 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> from pprint import pprint as pp
+>>> pp(locals())
+{'__annotations__': {},
+ '__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ '__spec__': None,
+ 'pp': <function pprint at 0x0120C538>,
+ 'sys': <module 'sys' (built-in)>}
+>>> import demo_reaer
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'demo_reaer'
+>>> import demo_reader
+__init__.py is executed
+>>> pp(locals())
+{'__annotations__': {},
+ '__builtins__': <module 'builtins' (built-in)>,
+ '__doc__': None,
+ '__loader__': <class '_frozen_importlib.BuiltinImporter'>,
+ '__name__': '__main__',
+ '__package__': None,
+ '__spec__': None,
+ 'demo_reader': <module 'demo_reader' from 'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'>,
+ 'pp': <function pprint at 0x0120C538>,
+ 'sys': <module 'sys' (built-in)>}
+>>> demo_reader.__class__
+<class 'module'>
+>>> demo_reader.__file__
+'D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader\\__init__.py'
+>>> demo_reader.__path__
+['D:\\60_learning\\05_pluralsight\\pluralsight_python\\organizing-larger-programs\\demo_reader']
+>>> demo_reader.__name__
+'demo_reader'
+>>>
