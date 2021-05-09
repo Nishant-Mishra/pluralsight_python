@@ -1,8 +1,9 @@
 import gzip
 
-from .. import util
+from demo_reader import util
 
 
+extension = '.gz'
 opener = gzip.open
 
 if __name__ == '__main__':

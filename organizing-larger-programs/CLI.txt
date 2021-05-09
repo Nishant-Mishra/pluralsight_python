@@ -1,8 +1,193 @@
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.bz2
-New Sample compressed with BZ2...
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.bz2
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>cd demo_reader
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>python setup.py install
+running install
+running bdist_egg
+running egg_info
+creating src\demo_reader.egg-info
+writing src\demo_reader.egg-info\PKG-INFO
+writing dependency_links to src\demo_reader.egg-info\dependency_links.txt
+writing top-level names to src\demo_reader.egg-info\top_level.txt
+writing manifest file 'src\demo_reader.egg-info\SOURCES.txt'
+reading manifest file 'src\demo_reader.egg-info\SOURCES.txt'
+writing manifest file 'src\demo_reader.egg-info\SOURCES.txt'
+installing library code to build\bdist.win-amd64\egg
+running install_lib
+running build_py
+creating build
+creating build\lib
+creating build\lib\demo_reader
+copying src\demo_reader\multireader.py -> build\lib\demo_reader
+copying src\demo_reader\__init__.py -> build\lib\demo_reader
+copying src\demo_reader\__main__.py -> build\lib\demo_reader
+creating build\lib\demo_reader\util
+copying src\demo_reader\util\writer.py -> build\lib\demo_reader\util
+copying src\demo_reader\util\__init__.py -> build\lib\demo_reader\util
+creating build\bdist.win-amd64
+creating build\bdist.win-amd64\egg
+creating build\bdist.win-amd64\egg\demo_reader
+copying build\lib\demo_reader\multireader.py -> build\bdist.win-amd64\egg\demo_reader
+creating build\bdist.win-amd64\egg\demo_reader\util
+copying build\lib\demo_reader\util\writer.py -> build\bdist.win-amd64\egg\demo_reader\util
+copying build\lib\demo_reader\util\__init__.py -> build\bdist.win-amd64\egg\demo_reader\util
+copying build\lib\demo_reader\__init__.py -> build\bdist.win-amd64\egg\demo_reader
+copying build\lib\demo_reader\__main__.py -> build\bdist.win-amd64\egg\demo_reader
+byte-compiling build\bdist.win-amd64\egg\demo_reader\multireader.py to multireader.cpython-39.pyc
+byte-compiling build\bdist.win-amd64\egg\demo_reader\util\writer.py to writer.cpython-39.pyc
+byte-compiling build\bdist.win-amd64\egg\demo_reader\util\__init__.py to __init__.cpython-39.pyc
+byte-compiling build\bdist.win-amd64\egg\demo_reader\__init__.py to __init__.cpython-39.pyc
+byte-compiling build\bdist.win-amd64\egg\demo_reader\__main__.py to __main__.cpython-39.pyc
+creating build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader.egg-info\PKG-INFO -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader.egg-info\SOURCES.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader.egg-info\dependency_links.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader.egg-info\top_level.txt -> build\bdist.win-amd64\egg\EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+creating dist
+creating 'dist\demo_reader-1.0.0-py3.9.egg' and adding 'build\bdist.win-amd64\egg' to it
+removing 'build\bdist.win-amd64\egg' (and everything under it)
+Processing demo_reader-1.0.0-py3.9.egg
+Copying demo_reader-1.0.0-py3.9.egg to d:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\venv\lib\site-packages
+Adding demo-reader 1.0.0 to easy-install.pth file
+
+Installed d:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\venv\lib\site-packages\demo_reader-1.0.0-py3.9.egg
+Processing dependencies for demo-reader==1.0.0
+Finished processing dependencies for demo-reader==1.0.0
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>cd ..\demo_reader_plugin_bz2
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader_plugin_bz2>python setup.py install
+running install
+running bdist_egg
+running egg_info
+creating src\demo_reader_plugin_bz2.egg-info
+writing src\demo_reader_plugin_bz2.egg-info\PKG-INFO
+writing dependency_links to src\demo_reader_plugin_bz2.egg-info\dependency_links.txt
+writing entry points to src\demo_reader_plugin_bz2.egg-info\entry_points.txt
+writing top-level names to src\demo_reader_plugin_bz2.egg-info\top_level.txt
+writing manifest file 'src\demo_reader_plugin_bz2.egg-info\SOURCES.txt'
+reading manifest file 'src\demo_reader_plugin_bz2.egg-info\SOURCES.txt'
+writing manifest file 'src\demo_reader_plugin_bz2.egg-info\SOURCES.txt'
+installing library code to build\bdist.win-amd64\egg
+running install_lib
+running build_py
+creating build
+creating build\lib
+creating build\lib\demo_reader_plugin_bz2
+copying src\demo_reader_plugin_bz2\bzipped.py -> build\lib\demo_reader_plugin_bz2
+copying src\demo_reader_plugin_bz2\__init__.py -> build\lib\demo_reader_plugin_bz2
+creating build\bdist.win-amd64
+creating build\bdist.win-amd64\egg
+creating build\bdist.win-amd64\egg\demo_reader_plugin_bz2
+copying build\lib\demo_reader_plugin_bz2\bzipped.py -> build\bdist.win-amd64\egg\demo_reader_plugin_bz2
+copying build\lib\demo_reader_plugin_bz2\__init__.py -> build\bdist.win-amd64\egg\demo_reader_plugin_bz2
+byte-compiling build\bdist.win-amd64\egg\demo_reader_plugin_bz2\bzipped.py to bzipped.cpython-39.pyc
+byte-compiling build\bdist.win-amd64\egg\demo_reader_plugin_bz2\__init__.py to __init__.cpython-39.pyc
+creating build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_bz2.egg-info\PKG-INFO -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_bz2.egg-info\SOURCES.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_bz2.egg-info\dependency_links.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_bz2.egg-info\entry_points.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_bz2.egg-info\top_level.txt -> build\bdist.win-amd64\egg\EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+creating dist
+creating 'dist\demo_reader_plugin_bz2-0.0.1-py3.9.egg' and adding 'build\bdist.win-amd64\egg' to it
+removing 'build\bdist.win-amd64\egg' (and everything under it)
+Processing demo_reader_plugin_bz2-0.0.1-py3.9.egg
+Copying demo_reader_plugin_bz2-0.0.1-py3.9.egg to d:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\venv\lib\site-packages
+Adding demo-reader-plugin-bz2 0.0.1 to easy-install.pth file
+
+Installed d:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\venv\lib\site-packages\demo_reader_plugin_bz2-0.0.1-py3.9.egg
+Processing dependencies for demo-reader-plugin-bz2==0.0.1
+Finished processing dependencies for demo-reader-plugin-bz2==0.0.1
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader_plugin_bz2>cd ..\demo_reader_plugin_gz
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader_plugin_gz>python setup.py install
+running install
+running bdist_egg
+running egg_info
+creating src\demo_reader_plugin_gz.egg-info
+writing src\demo_reader_plugin_gz.egg-info\PKG-INFO
+writing dependency_links to src\demo_reader_plugin_gz.egg-info\dependency_links.txt
+writing entry points to src\demo_reader_plugin_gz.egg-info\entry_points.txt
+writing top-level names to src\demo_reader_plugin_gz.egg-info\top_level.txt
+writing manifest file 'src\demo_reader_plugin_gz.egg-info\SOURCES.txt'
+reading manifest file 'src\demo_reader_plugin_gz.egg-info\SOURCES.txt'
+writing manifest file 'src\demo_reader_plugin_gz.egg-info\SOURCES.txt'
+installing library code to build\bdist.win-amd64\egg
+running install_lib
+running build_py
+creating build
+creating build\lib
+creating build\lib\demo_reader_plugin_gz
+copying src\demo_reader_plugin_gz\gzipped.py -> build\lib\demo_reader_plugin_gz
+copying src\demo_reader_plugin_gz\__init__.py -> build\lib\demo_reader_plugin_gz
+creating build\bdist.win-amd64
+creating build\bdist.win-amd64\egg
+creating build\bdist.win-amd64\egg\demo_reader_plugin_gz
+copying build\lib\demo_reader_plugin_gz\gzipped.py -> build\bdist.win-amd64\egg\demo_reader_plugin_gz
+copying build\lib\demo_reader_plugin_gz\__init__.py -> build\bdist.win-amd64\egg\demo_reader_plugin_gz
+byte-compiling build\bdist.win-amd64\egg\demo_reader_plugin_gz\gzipped.py to gzipped.cpython-39.pyc
+byte-compiling build\bdist.win-amd64\egg\demo_reader_plugin_gz\__init__.py to __init__.cpython-39.pyc
+creating build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_gz.egg-info\PKG-INFO -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_gz.egg-info\SOURCES.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_gz.egg-info\dependency_links.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_gz.egg-info\entry_points.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying src\demo_reader_plugin_gz.egg-info\top_level.txt -> build\bdist.win-amd64\egg\EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+creating dist
+creating 'dist\demo_reader_plugin_gz-0.0.1-py3.9.egg' and adding 'build\bdist.win-amd64\egg' to it
+removing 'build\bdist.win-amd64\egg' (and everything under it)
+Processing demo_reader_plugin_gz-0.0.1-py3.9.egg
+Copying demo_reader_plugin_gz-0.0.1-py3.9.egg to d:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\venv\lib\site-packages
+Adding demo-reader-plugin-gz 0.0.1 to easy-install.pth file
+
+Installed d:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\venv\lib\site-packages\demo_reader_plugin_gz-0.0.1-py3.9.egg
+Processing dependencies for demo-reader-plugin-gz==0.0.1
+Finished processing dependencies for demo-reader-plugin-gz==0.0.1
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader_plugin_gz>cd ..
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader text.bz2
 __init__.py executed...
 New Sample compressed with BZ2...
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.gz
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader text2.bz2
+__init__.py executed...
+Hello World!!
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader text.gz
 __init__.py executed...
 New Sample Text compressed with GZIP...
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader demo_reader\README.rst
+__init__.py executed...
+An example of structuring Python Projects
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader demo_reader\setup.py
+__init__.py executed...
+import setuptools
+
+
+setuptools.setup(
+    name="demo_reader",
+    description="Tool to read various compressed/raw file formats",
+    version="1.0.0",
+    packages=setuptools.find_packages('src'),
+    package_dir={
+        '': 'src'
+    }
+)
+
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader_plugin_gz.gzipped gztext.gz After installing the plugins, each plugin can be run separately using command line 'python -m demo_reader_plugin_XX.Yzipped [zip file] [text to zip]' to create new compressed files
+__init__.py executed...
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader gztext.gz
+__init__.py executed...
+After installing the plugins, each plugin can be run separately using command line 'python -m demo_reader_plugin_XX.Yzipped [zip file] [text to zip]' to create new compressed files
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>

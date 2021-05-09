@@ -1,10 +1,16 @@
 import os.path
+import pkg_resources
 
-from demo_reader.compressed import bzipped, gzipped
+
+compression_plugins = {
+    entry_point.load()
+    for entry_point in
+    pkg_resources.iter_entry_points('demo_reader.compression_plugins')
+}
 
 extension_map = {
-    '.gz': gzipped.opener,
-    '.bz2': bzipped.opener
+    module.extension: module.opener
+    for module in compression_plugins
 }
 
 
