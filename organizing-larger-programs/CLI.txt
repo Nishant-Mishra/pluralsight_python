@@ -1,8 +1,39 @@
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.bz2
+
+PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>
+Python 3.8.9 (tags/v3.8.9:a743f81, Apr  6 2021, 13:22:56) [MSC v.1928 32 bit (Intel)] on win32
+>>> import sys
+>>> sys.path
+['', 'C:\\Program Files (x86)\\Python38-32\\python38.zip', 'C:\\Program Files (x86)\\Python38-32\\DLLs', 'C:\\Program Files (x86)\\Python38-32\\lib', 'C:\\Program Files (x86)\\Python38-32', 'C:\\Program Files (x86)\\Python38-32\\lib\\site-packages']
+>>> sys.path.extend(['core', 'bz2_plugin', 'gz_plugin'])
+>>> sys.path
+['', 'C:\\Program Files (x86)\\Python38-32\\python38.zip', 'C:\\Program Files (x86)\\Python38-32\\DLLs', 'C:\\Program Files (x86)\\Python38-32\\lib', 'C:\\Program Files (>>> import demo_reader
+>>> demo_reader.__path__
+_NamespacePath(['core\\demo_reader', 'bz2_plugin\\demo_reader', 'gz_plugin\\demo_reader'])
+>>> import demo_reader.compressed
+>>> demo_reader.compressed.__path__
+_NamespacePath(['core\\demo_reader\\compressed', 'bz2_plugin\\demo_reader\\compressed', 'gz_plugin\\demo_reader\\compressed'])
+>>> import demo_reader.compressed.bzipped
+>>> demo_reader.compressed.bzipped.__path__
+AttributeError: module 'demo_reader.compressed.bzipped' has no attribute '__path__'
+>>> demo_reader.compressed.bzipped.__file__
+'bz2_plugin\\demo_reader\\compressed\\bzipped.py'
+>>>
+
+
+=======================================================================================================================
+
+D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>set PYTHONPATH=core;bz2_plugin;gz_plugin
+
+D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>echo %PYTHONPATH%
+core;bz2_plugin;gz_plugin
+
+D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader text.bz2
 New Sample compressed with BZ2...
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.bz2
-__init__.py executed...
-New Sample compressed with BZ2...
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.gz
-__init__.py executed...
+
+D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs>python -m demo_reader text.gz
 New Sample Text compressed with GZIP...
+
+
+
+
+
