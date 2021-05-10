@@ -1,40 +1,60 @@
-(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>python setup.py sdist
-running sdist
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>python setup.py bdist_wheel
+running bdist_wheel
+running build
+running build_py
+creating build
+creating build\lib
+creating build\lib\demo_reader
+copying src\demo_reader\multireader.py -> build\lib\demo_reader
+copying src\demo_reader\__init__.py -> build\lib\demo_reader
+copying src\demo_reader\__main__.py -> build\lib\demo_reader
+creating build\lib\demo_reader\compressed
+copying src\demo_reader\compressed\bzipped.py -> build\lib\demo_reader\compressed
+copying src\demo_reader\compressed\gzipped.py -> build\lib\demo_reader\compressed
+copying src\demo_reader\compressed\__init__.py -> build\lib\demo_reader\compressed
+creating build\lib\demo_reader\util
+copying src\demo_reader\util\writer.py -> build\lib\demo_reader\util
+copying src\demo_reader\util\__init__.py -> build\lib\demo_reader\util
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\demo_reader
+creating build\bdist.win-amd64\wheel\demo_reader\compressed
+copying build\lib\demo_reader\compressed\bzipped.py -> build\bdist.win-amd64\wheel\.\demo_reader\compressed
+copying build\lib\demo_reader\compressed\gzipped.py -> build\bdist.win-amd64\wheel\.\demo_reader\compressed
+copying build\lib\demo_reader\compressed\__init__.py -> build\bdist.win-amd64\wheel\.\demo_reader\compressed
+copying build\lib\demo_reader\multireader.py -> build\bdist.win-amd64\wheel\.\demo_reader
+creating build\bdist.win-amd64\wheel\demo_reader\util
+copying build\lib\demo_reader\util\writer.py -> build\bdist.win-amd64\wheel\.\demo_reader\util
+copying build\lib\demo_reader\util\__init__.py -> build\bdist.win-amd64\wheel\.\demo_reader\util
+copying build\lib\demo_reader\__init__.py -> build\bdist.win-amd64\wheel\.\demo_reader
+copying build\lib\demo_reader\__main__.py -> build\bdist.win-amd64\wheel\.\demo_reader
+running install_egg_info
 running egg_info
 writing src\demo_reader.egg-info\PKG-INFO
 writing dependency_links to src\demo_reader.egg-info\dependency_links.txt
 writing top-level names to src\demo_reader.egg-info\top_level.txt
 reading manifest file 'src\demo_reader.egg-info\SOURCES.txt'
 writing manifest file 'src\demo_reader.egg-info\SOURCES.txt'
-running check
-warning: check: missing required meta-data: url
-
-warning: check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) should be supplied
-
-creating demo_reader-1.0.0
-creating demo_reader-1.0.0\src
-creating demo_reader-1.0.0\src\demo_reader
-creating demo_reader-1.0.0\src\demo_reader.egg-info
-creating demo_reader-1.0.0\src\demo_reader\compressed
-creating demo_reader-1.0.0\src\demo_reader\util
-copying files to demo_reader-1.0.0...
-copying README.rst -> demo_reader-1.0.0
-copying setup.py -> demo_reader-1.0.0
-copying src\demo_reader\__init__.py -> demo_reader-1.0.0\src\demo_reader
-copying src\demo_reader\__main__.py -> demo_reader-1.0.0\src\demo_reader
-copying src\demo_reader\multireader.py -> demo_reader-1.0.0\src\demo_reader
-copying src\demo_reader.egg-info\PKG-INFO -> demo_reader-1.0.0\src\demo_reader.egg-info
-copying src\demo_reader.egg-info\SOURCES.txt -> demo_reader-1.0.0\src\demo_reader.egg-info
-copying src\demo_reader.egg-info\dependency_links.txt -> demo_reader-1.0.0\src\demo_reader.egg-info
-copying src\demo_reader.egg-info\top_level.txt -> demo_reader-1.0.0\src\demo_reader.egg-info
-copying src\demo_reader\compressed\__init__.py -> demo_reader-1.0.0\src\demo_reader\compressed
-copying src\demo_reader\compressed\bzipped.py -> demo_reader-1.0.0\src\demo_reader\compressed
-copying src\demo_reader\compressed\gzipped.py -> demo_reader-1.0.0\src\demo_reader\compressed
-copying src\demo_reader\util\__init__.py -> demo_reader-1.0.0\src\demo_reader\util
-copying src\demo_reader\util\writer.py -> demo_reader-1.0.0\src\demo_reader\util
-Writing demo_reader-1.0.0\setup.cfg
-Creating tar archive
-removing 'demo_reader-1.0.0' (and everything under it)
+Copying src\demo_reader.egg-info to build\bdist.win-amd64\wheel\.\demo_reader-1.0.0-py3.9.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\demo_reader-1.0.0.dist-info\WHEEL
+creating 'dist\demo_reader-1.0.0-py3-none-any.whl' and adding 'build\bdist.win-amd64\wheel' to it
+adding 'demo_reader/__init__.py'
+adding 'demo_reader/__main__.py'
+adding 'demo_reader/multireader.py'
+adding 'demo_reader/compressed/__init__.py'
+adding 'demo_reader/compressed/bzipped.py'
+adding 'demo_reader/compressed/gzipped.py'
+adding 'demo_reader/util/__init__.py'
+adding 'demo_reader/util/writer.py'
+adding 'demo_reader-1.0.0.dist-info/METADATA'
+adding 'demo_reader-1.0.0.dist-info/WHEEL'
+adding 'demo_reader-1.0.0.dist-info/top_level.txt'
+adding 'demo_reader-1.0.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
 
 (venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>dir dist\
  Volume in drive D is Work
@@ -42,10 +62,10 @@ removing 'demo_reader-1.0.0' (and everything under it)
 
  Directory of D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader\dist
 
-11-05-2021  00:10    <DIR>          .
-11-05-2021  00:10    <DIR>          ..
-11-05-2021  00:11             1,798 demo_reader-1.0.0.tar.gz
-               1 File(s)          1,798 bytes
-               2 Dir(s)  47,188,348,928 bytes free
+11-05-2021  00:18    <DIR>          .
+11-05-2021  00:18    <DIR>          ..
+11-05-2021  00:18             3,316 demo_reader-1.0.0-py3-none-any.whl
+               1 File(s)          3,316 bytes
+               2 Dir(s)  47,185,653,760 bytes free
 
 (venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>
