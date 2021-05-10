@@ -1,8 +1,51 @@
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.bz2
-New Sample compressed with BZ2...
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.bz2
-__init__.py executed...
-New Sample compressed with BZ2...
-PS D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs> python -m demo_reader .\text.gz
-__init__.py executed...
-New Sample Text compressed with GZIP...
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>python setup.py sdist
+running sdist
+running egg_info
+writing src\demo_reader.egg-info\PKG-INFO
+writing dependency_links to src\demo_reader.egg-info\dependency_links.txt
+writing top-level names to src\demo_reader.egg-info\top_level.txt
+reading manifest file 'src\demo_reader.egg-info\SOURCES.txt'
+writing manifest file 'src\demo_reader.egg-info\SOURCES.txt'
+running check
+warning: check: missing required meta-data: url
+
+warning: check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) should be supplied
+
+creating demo_reader-1.0.0
+creating demo_reader-1.0.0\src
+creating demo_reader-1.0.0\src\demo_reader
+creating demo_reader-1.0.0\src\demo_reader.egg-info
+creating demo_reader-1.0.0\src\demo_reader\compressed
+creating demo_reader-1.0.0\src\demo_reader\util
+copying files to demo_reader-1.0.0...
+copying README.rst -> demo_reader-1.0.0
+copying setup.py -> demo_reader-1.0.0
+copying src\demo_reader\__init__.py -> demo_reader-1.0.0\src\demo_reader
+copying src\demo_reader\__main__.py -> demo_reader-1.0.0\src\demo_reader
+copying src\demo_reader\multireader.py -> demo_reader-1.0.0\src\demo_reader
+copying src\demo_reader.egg-info\PKG-INFO -> demo_reader-1.0.0\src\demo_reader.egg-info
+copying src\demo_reader.egg-info\SOURCES.txt -> demo_reader-1.0.0\src\demo_reader.egg-info
+copying src\demo_reader.egg-info\dependency_links.txt -> demo_reader-1.0.0\src\demo_reader.egg-info
+copying src\demo_reader.egg-info\top_level.txt -> demo_reader-1.0.0\src\demo_reader.egg-info
+copying src\demo_reader\compressed\__init__.py -> demo_reader-1.0.0\src\demo_reader\compressed
+copying src\demo_reader\compressed\bzipped.py -> demo_reader-1.0.0\src\demo_reader\compressed
+copying src\demo_reader\compressed\gzipped.py -> demo_reader-1.0.0\src\demo_reader\compressed
+copying src\demo_reader\util\__init__.py -> demo_reader-1.0.0\src\demo_reader\util
+copying src\demo_reader\util\writer.py -> demo_reader-1.0.0\src\demo_reader\util
+Writing demo_reader-1.0.0\setup.cfg
+Creating tar archive
+removing 'demo_reader-1.0.0' (and everything under it)
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>dir dist\
+ Volume in drive D is Work
+ Volume Serial Number is 8E18-93F9
+
+ Directory of D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader\dist
+
+11-05-2021  00:10    <DIR>          .
+11-05-2021  00:10    <DIR>          ..
+11-05-2021  00:11             1,798 demo_reader-1.0.0.tar.gz
+               1 File(s)          1,798 bytes
+               2 Dir(s)  47,188,348,928 bytes free
+
+(venv) D:\60_learning\05_pluralsight\pluralsight_python\organizing-larger-programs\demo_reader>
