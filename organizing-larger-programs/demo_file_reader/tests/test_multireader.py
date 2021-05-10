@@ -1,6 +1,6 @@
 import unittest
 
-from demo_reader.multireader import MultiReader as MR
+from demo_file_reader.multireader import MultiReader as MR
 
 
 class Test_MultiReader(unittest.TestCase):

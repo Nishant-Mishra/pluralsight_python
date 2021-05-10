@@ -1,6 +1,6 @@
 import os.path
 
-from demo_reader.compressed import bzipped, gzipped
+from demo_file_reader.compressed import bzipped, gzipped
 
 extension_map = {
     '.gz': gzipped.opener,
